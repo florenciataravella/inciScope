@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index-base.css">
+    <link rel="stylesheet" href="/css/index-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="ajaxHeader"></header>
+    <main>
+    <div class="search">
+    <input type="text" id="compoundInput" name="compound" placeholder="Search compound...">
+   <button id="search-btn"> 🔍 </button>
+   </div>
+   
+   <dialog id="myModal">
+    <p> Could not find your search, please enter another compound. Do not use special characters in your search.</p>
+    <button id="closeModal"> X </button>
+    </dialog>
+    <section class="compound-details">
+       
+         <div id="compound-pubChemDetails"></div>
+          <div id="compound-wikiDetails"></div>
+          <div id="compound-image"></div>
+          
+</section>
+    
+   <button id="clearDescription">Clear</button>
+   
+   <dialog id="visits">
+    <p id="n-visits"></p>
+    <button id="closeModal"></button>
+    </dialog>
+    </main>
+   <footer id="ajaxFooter"></footer>
+   
+   <script type="module" src="/scripts/main.js"></script>
+   
+
+</body>
+</html>

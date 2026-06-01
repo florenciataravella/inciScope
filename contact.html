@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/contact-base.css">
+    <link rel="stylesheet" href="/css/contact-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="ajaxHeader"></header>
+    <form id="myForm">
+        <fieldset id="contactInfo">
+            <legend> Contact information </legend>
+            <label for="fname">Name <input type="text" name="fname" required> </label>
+            <label for="lname">Last name <input type="text" name="lname" required> </label>
+            <label for="email">e-mail <input type="email" name="email" placeholder="john@email.com" required> </label>
+            <label for="phone">Name <input type="tel" name="phone"> </label>
+            <label for="website">Name <input type="text" name="website"> </label>
+        </fieldset>
+        <fieldset id="interest">
+            <lejend> Interest</lejend>
+            <label for="interest"> Compound information
+            <input type="radio" name="interest" value="compound information"></label>
+            <label for="interest"> Supplier information<input type="radio" name="interest" value="supplier information"></label>
+            <label for="interest"> Formulation information <input type="radio" name="interest" value="formulation interest"></label>
+            
+        </fieldset>
+        <fieldset id="description">
+
+        </fieldset>
+    </form>
+    <dialog id="myModal">
+    <p> Thank you for contacting.</p>
+    <button id="closeModal"> X </button>
+   </dialog>
+   <footer id="ajaxFooter"></footer>
+   <script type="module" src="/scripts/contact.js"></script>
+</body>
+
+</html>

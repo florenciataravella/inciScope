@@ -1,0 +1,25 @@
+@media (min-width:41rem){
+
+}
+@media (min-width: 50rem){
+    .hamburger{
+        display: none;
+    }
+    .navigation{
+        display: grid;
+        grid-template: auto / 1fr 2fr;
+    }
+    .navigation ul{
+        display: grid;
+        grid-template: auto / repeat(4, 1fr);
+    }
+    .navigation a{
+        display: flex;
+        width: 100%;
+        border: none;
+    }
+    .navigation li{
+        
+        align-content: center;
+    }
+}
