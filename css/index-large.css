@@ -1,25 +1,182 @@
-@media (min-width:41rem){
+/*@media (min-width:41rem){
 
+}*/
+:root {
+    --bg-color: white;
+    --bg-color-banner:  #26195a;
+    --bg-color-footer:#d0ddf6;
+    --menu-fontcolor: white;
+    --text-fontcolor: black;
+    
+    
+    
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
 }
-@media (min-width: 50rem){
+h1, h2, h3{
+    font-weight: 400;
+}
+}
+
+@media (min-width: 40rem){
     .hamburger{
         display: none;
     }
     .navigation{
         display: grid;
-        grid-template: auto / 1fr 2fr;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1;
+        height: 70px;
     }
-    .navigation ul{
-        display: grid;
-        grid-template: auto / repeat(4, 1fr);
+    .nav-links{
+        grid-column: 2/3;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
     }
     .navigation a{
-        display: flex;
-        width: 100%;
+        display: block;
+        width: auto;
         border: none;
     }
     .navigation li{
-        
-        align-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     }
+
+    .navigation img{
+    
+   height: 60px;
+    width: auto;
+        padding: 0.5rem;
+}
+/***********SearchInput************/
+#compoundInput{
+    
+    height: 100%;
+    border:#f2f7f4;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    background: transparent;
+    color: white;
+    width: 120px;
+     border-radius: 12px;
+    /* margin-right: 2rem;*/
+
+}
+    .compound-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px; 
+    padding-top: 2rem;
+    width: 90%;
+    justify-self: center;
+}
+/**************MAIN*****************/
+#compound-pubChemDetails{
+    grid-column: 1/2;
+    width: 100%;
+    height: auto;
+    background: transparent;
+   
+    max-width: 100%;
+    box-sizing: border-box;
+}
+#compound-wikiDetails{
+    grid-column: 2/3;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    background: transparent;
+   
+}
+.description{
+    padding: 2rem;
+
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.description #compound-image{
+    justify-self: center;
+}
+/*********TABLE***************/
+#compound-pubChemDetails th{
+   
+    font-size: 1rem;
+    
+}
+#compound-pubChemDetails td{
+
+
+    font-size: 1rem;
+}
+.compound-title{
+    font-size: 2rem;}
+
+/************FOOTER*************/
+.footer-links{
+
+  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    
+}
+.footer-links p{
+  grid-column: 2/3;
+  grid-row: 1;
+  justify-self: center;
+  align-self:end;
+}
+.footer-links a:first-of-type{
+  grid-column: 1/2;
+  grid-row: 2;
+  justify-self: center;
+  align-self: baseline;
+
+}
+.footer-links a:nth-of-type(2){
+  grid-column: 2/3;
+  grid-row: 2;
+  justify-self: center;
+  align-self: baseline;
+}
+.footer-links a:nth-of-type(3){
+  grid-column: 3/4;
+  grid-row: 2;
+  justify-self: center;
+  align-self: baseline;
+}
+.footer-copy {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+}
+#name{
+grid-column: 1/2;
+grid-row: 1;
+justify-self: center;
+align-self: self-end;
+}
+#time{
+grid-column: 1/2;
+grid-row: 2;
+justify-self: center;
+align-self:self-start;
+}
+
+
 }

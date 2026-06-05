@@ -13,10 +13,10 @@
 <body>
     <header id="ajaxHeader"></header>
     <main>
-    <div class="search">
+    <!--<div class="search">
     <input type="text" id="compoundInput" name="compound" placeholder="Search compound...">
    <button id="search-btn"> 🔍 </button>
-   </div>
+   </div>-->
    
    <dialog id="myModal">
     <p> Could not find your search, please enter another compound. Do not use special characters in your search.</p>
@@ -25,16 +25,17 @@
     <section class="compound-details">
        
          <div id="compound-pubChemDetails"></div>
+          <section class="description">
           <div id="compound-wikiDetails"></div>
           <div id="compound-image"></div>
-          
-</section>
+          </section>
+    </section>
     
-   <button id="clearDescription">Clear</button>
+  <div id="clearDiv"> <button id="clearButton">Clear</button></div>
    
    <dialog id="visits">
     <p id="n-visits"></p>
-    <button id="closeModal"></button>
+    <button id="closeModal">x</button>
     </dialog>
     </main>
    <footer id="ajaxFooter"></footer>

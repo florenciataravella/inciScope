@@ -59,7 +59,7 @@ compoundPubChemDetailsTemplate(){
 }
 wikiCompoundDetailsTemplate(){
     return ` 
-    <h4> Description: </h4>
+    <h3 class="compound-title"> Description: </h3>
     <p> ${this.wikiDetails.Description}</p>
     <h4> Extract: </h4>
     <p> ${this.wikiDetails.Extract}</p>
