@@ -140,6 +140,14 @@ main{
 .description #compound-image{
     justify-self: center;
 }
+/**************MODALS***************/
+#myModal, #visits{
+    width: 100px;
+    background-color: rgba(255,255,255);
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 /**************TABLE****************/
 
 #compound-pubChemDetails table{
@@ -222,6 +230,14 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 100px;
     background-color: var(--bg-color-footer);
+    background: linear-gradient(
+    135deg,
+  #b4cbf6,
+#f9f4cb,
+#eedaf5,
+    #eef7f0,
+     #b4cbf6
+);
 
 }
 .footer-logo{

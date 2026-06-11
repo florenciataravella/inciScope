@@ -14,9 +14,8 @@ export default class CompoundDetails{
 
     }
     
-
 async init(){
-    
+            
     this.pubChemDetails = await this.dataSource.getPubChemData();
     this.wikiDetails = await this.dataSource.getWikiData();
     this.image = `<img src = "${await this.dataSource.getPubChemImage()}"/>`;

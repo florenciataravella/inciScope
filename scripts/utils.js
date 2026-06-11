@@ -72,3 +72,30 @@ export  function setupNavigation(){
 
     })
 }
+export function randomCompound(){
+    const compoundsArray = [
+  "glucose",
+  "ethanol",
+  "caffeine",
+  "aspirin",
+  "acetone",
+  "benzene",
+  "methane",
+  "citric acid",
+  "sucrose",
+  "fructose",
+  "glycerol",
+  "lactic acid",
+  "urea",
+  "cholesterol",
+  "dopamine",
+  "serotonin",
+  "nicotine",
+  "ibuprofen",
+  "acetaminophen",
+  "vanillin"
+];
+const randomIndex = Math.floor(Math.random()* compoundsArray.length);
+const returnedCompound = compoundsArray[randomIndex];
+return returnedCompound
+}

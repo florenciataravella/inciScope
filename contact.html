@@ -9,34 +9,100 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <meta name="author" content="Florencia Taravella">
+    <meta name="description" content="InciScope is a chemical compound explorer that retrieves molecular properties, descriptions, and structural information from PubChem and Wikipedia APIs.">
+
+    <title>Contact InciScope</title>
+
+<link rel="icon" href="images/favicon.ico">
+
+<meta property="og:title" content="Contact InciScope">
+
+<meta property="og:image" content="https://inciscope.onrender.com/images/InciScope.png">
+
+<meta property="og:type" content="website">
+
+<meta name="description" content="Contact the developer of InciScope with questions, suggestions, or requests for information about chemical compounds and the application.">
+
+<meta property="og:description" content="Get in touch with the developer of InciScope.">
+<meta property="og:url" content="https://inciscope.onrender.com/contact.html">
 </head>
 <body>
     <header id="ajaxHeader"></header>
-    <form id="myForm">
+    <main>
+        <h3> Contact InciScope</h3>
+    <form id="myForm" method="get" class="contactForm">
         <fieldset id="contactInfo">
-            <legend> Contact information </legend>
-            <label for="fname">Name <input type="text" name="fname" required> </label>
-            <label for="lname">Last name <input type="text" name="lname" required> </label>
-            <label for="email">e-mail <input type="email" name="email" placeholder="john@email.com" required> </label>
-            <label for="phone">Name <input type="tel" name="phone"> </label>
-            <label for="website">Name <input type="text" name="website"> </label>
+            <legend> Personal information </legend>
+            <label for="fname">Name <input type="text" name="fname" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+  title="Please enter letters only." autocomplete="given-name"> </label>
+            <label for="lname">Last name <input type="text" name="lname" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+  title="Please enter letters only." autocomplete="family-name"> </label>
+            <label for="email">e-mail <input type="email" name="email" placeholder="example@email.com" required autocomplete="email"> </label>
+            <label for="phone">Phone <input type="tel" name="phone" pattern="[\+]?[0-9\s\-\(\)]{8,20}"> </label>
+            <label for="website">Website <input type="text" name="website"> </label>
         </fieldset>
         <fieldset id="interest">
-            <lejend> Interest</lejend>
+            <legend> Interest</legend>
             <label for="interest"> Compound information
             <input type="radio" name="interest" value="compound information"></label>
             <label for="interest"> Supplier information<input type="radio" name="interest" value="supplier information"></label>
             <label for="interest"> Formulation information <input type="radio" name="interest" value="formulation interest"></label>
             
-        </fieldset>
-        <fieldset id="description">
-
-        </fieldset>
+          <div class="textarea">
+            <label for="interests"> Interests<span>(Optional)</span></label><textarea rows="5" name="interests" id="interests" title="Write your prefences, interests, concerns, etc..."></textarea>
+        </div>
+            <input id="submitBtn" type="submit" value="Contact InciScope">
     </form>
-    <dialog id="myModal">
-    <p> Thank you for contacting.</p>
-    <button id="closeModal"> X </button>
-   </dialog>
+    <div id="thankyou" ></div>
+    </main>
+<!-- <h1>Join us</h1>
+        <div class="classmain">
+        <form action="record-thankyou.html" method="get" class="join-form">
+            <label for="firstname"> First Name:</label><input type="text" id="firstname" name="firstname" title="Write your first name here" autocomplete="given-name" required/>
+            <label for="lastname"> Last Name:</label><input type="text" id="lastname" name="lastname" title="Write your last name here" autocomplete="family-name" required/>
+            <label for="age"> Age:</label><input type="text" name="age" id="age" title="Years old" pattern="[0-9\- ]+"/>
+            <label for="email"> Email:</label><input type="email" name="email" id="email" title="Write your email here" autocomplete="email" placeholder="example@email.com" required/>
+            <label for="mobile"> Cell phone:</label><input type="tel" name="cellphone" id="mobile" title="Write your cell phone here" autocomplete="tel" pattern=[0-9]+ required/>
+           
+            <div class="textarea">
+            <label for="interests"> Interests<span>(Optional)</span></label><textarea rows="5" name="interests" id="interests" title="Write your prefences, interests, concerns, etc..."></textarea>
+                </div>
+                 <fieldset>
+                <legend>Interest selection</legend>
+            <label for="pers"><input type="radio" id="pers" name="interest-select"  value="Personalized"/>Personalized</label>
+            <label for="coached"><input type="radio" id="coached" name="interest-select"  value="Coached"/>Coached</label>
+            <label for="self"><input type="radio" id="self" name="interest-select"  value="Self-guided"/>Self-guided</label>
+            <label for="others"><input type="radio" id="others" name="interest-select"  value="Others"/>Others</label>
+            </fieldset>
+            <input type="hidden" name="timestamp" id="timestamp">
+            <input type="submit" value="Join the Gym">
+        </form>
+        <section class= "interest-cards">
+            <div>
+                <h4> Personalized</h4>
+                <button id="pers-btn" >Know more</button>
+            </div>
+            <div>
+                <h4> Coached</h4>
+                <button id="coachedclass-btn">Know more</button>
+            </div>
+            <div>
+                <h4> Self-guided</h4>
+                <button id="selfg-btn">Know more</button>
+            </div>
+            <div>
+                <h4> Others</h4>
+                <button id="other-btn">Know more</button>
+            </div>
+            <dialog id="training-details">
+
+            </dialog>
+        </section>
+         </div>
+         
+    </main>-->
    <footer id="ajaxFooter"></footer>
    <script type="module" src="/scripts/contact.js"></script>
 </body>

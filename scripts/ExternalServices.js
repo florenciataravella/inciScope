@@ -1,8 +1,10 @@
-function convertToJSON(response){
-    if (response.ok){
-        return response.json();
+async function convertToJSON(response){
+
+    if (!response.ok){
+        
+        throw new Error(`HTTP error ${response.status}`)
     }
-    else errorModal();
+    return response.json();
 }
 function errorModal(){
 const modal = document.getElementById("myModal");
@@ -74,9 +76,16 @@ export default class ExternalServices{
             }
 
     async init(){
-        this.getPubChemData()
-        this.getWikiData()
-        this.getPubChemImage()
+
+        try{
+        await this.getPubChemData()
+        await this.getWikiData()
+        await this.getPubChemImage()
+            }
+        catch (error){
+            errorModal();
+        console.log("Error fetching the data", error);
+}
 
     }
 }

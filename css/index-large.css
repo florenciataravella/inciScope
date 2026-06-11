@@ -1,7 +1,10 @@
 /*@media (min-width:41rem){
 
 }*/
-:root {
+
+
+@media (min-width: 40rem){
+    :root {
     --bg-color: white;
     --bg-color-banner:  #26195a;
     --bg-color-footer:#d0ddf6;
@@ -19,8 +22,6 @@ h1, h2, h3{
     font-weight: 400;
 }
 }
-
-@media (min-width: 40rem){
     .hamburger{
         display: none;
     }
@@ -121,7 +122,10 @@ h1, h2, h3{
 }
 .compound-title{
     font-size: 2rem;}
-
+/*************MODALS************/
+#myModal, #visits{
+    width: 200px;
+}
 /************FOOTER*************/
 .footer-links{
 

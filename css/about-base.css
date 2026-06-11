@@ -1,18 +1,20 @@
 :root {
     --bg-color: white;
-    --bg-color-banner: #4A9515;
+    --bg-color-banner:  #26195a;
+    --bg-color-footer:#d0ddf6;
     --menu-fontcolor: white;
     --text-fontcolor: black;
     
+    
+    
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 0.8rem;
 }
 h1, h2, h3{
-    font-weight: 400;
+    font-weight: 300;
 }
-
-
 }
 /**************HAMBURGER NAVIGATION***************/
 .hamburger{
@@ -27,13 +29,13 @@ h1, h2, h3{
 }
 .hamburger::before{
     content: "...";
-    font-size: 2.5rem;
-    color: black;
+    font-size: 2rem;
+    color: var(--menu-fontcolor);
 }
 .hamburger.show::before{
     content: "\00D7";
-    font-size: 2.5rem;
-    color: black;
+    font-size: 2rem;
+    color: var(--menu-fontcolor);
     padding: 0%;
     margin: 0%;
 }
@@ -43,25 +45,74 @@ h1, h2, h3{
 }
 .nav-links.show{
     display: block;
-   
 }
 .navigation a{
     text-decoration: none;
-    color: var(--menu-fontcolor);
-    
+    color: var(--menu-fontcolor);   
 }
 .nav-links{
      list-style: none;
+
 }
 .navigation{
     background-color: var(--bg-color-banner);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15); 
+    padding-bottom: 0.05rem;
 }
+.navigation img{
+    padding-top: 1.5rem;
+    padding-left: 2rem;
+    align-self: center;
+}
+#searchLi.hide{
+    display: none;
+}
+/**************MAIN*****************/
+main{
+    background: linear-gradient(
+    135deg,
+    #eef7f0,
+#eedaf5,
+#f9f4cb,
+   #b4cbf6
+);
+}
+.compound-title{
+    font-size: 1.2rem;
+
+    margin-bottom: 1rem;
+
+    color: #1d1d1d;
+
+    font-family: "Playfair Display", serif;
+    padding-left: 2rem;
+
+}
+#compound-pubChemDetails {
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    /*background-color: 
+        #eef7f0;*/
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
 /**************FOOTER***************/
 .footer-grid{
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px 100px;
+    background-color: var(--bg-color-footer);
+    background: linear-gradient(
+    135deg,
+  #b4cbf6,
+#f9f4cb,
+#eedaf5,
+    #eef7f0,
+     #b4cbf6
+);
 
 }
 .footer-logo{
@@ -73,59 +124,33 @@ h1, h2, h3{
     justify-content: center;
     align-items: center;
     
-   
+}
+.footer-logo p{
+    text-align: center;
 }
 
 .footer-links{
     grid-column: 2 / 3;
     grid-row: 1 / 3;
     
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr;
-    
+      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.footer-links p{
-  grid-column: 2/3;
-  grid-row: 1;
-  justify-self: center;
-  align-self: center;
-}
-.footer-links a:first-of-type{
-  grid-column: 1/2;
-  grid-row: 2;
-  justify-self: center;
+.footer-copy{
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.footer-links a:nth-of-type(2){
-  grid-column: 2/3;
-  grid-row: 2;
-  justify-self: center;
+.footer-copy #name{
+    word-break: break-word;
+    text-align: center;
 }
-.footer-links a:nth-of-type(3){
-  grid-column: 3/4;
-  grid-row: 2;
-  justify-self: center;
-}
-.footer-copy {
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  
-}
-#name{
-grid-column: 1/2;
-grid-row: 1;
-justify-self: center;
-align-self: self-end;
-}
-#time{
-grid-column: 1/2;
-grid-row: 2;
-justify-self: center;
-align-self:self-start;
-}
 
