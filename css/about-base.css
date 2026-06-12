@@ -77,7 +77,7 @@ main{
    #b4cbf6
 );
 }
-.compound-title{
+h2{
     font-size: 1.2rem;
 
     margin-bottom: 1rem;
@@ -88,7 +88,7 @@ main{
     padding-left: 2rem;
 
 }
-#compound-pubChemDetails {
+.description, .tech {
     padding: 2rem;
 
     border-radius: 20px;

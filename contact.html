@@ -31,8 +31,9 @@
 <body>
     <header id="ajaxHeader"></header>
     <main>
-        <h3> Contact InciScope</h3>
+        
     <form id="myForm" method="get" class="contactForm">
+        <h3> Contact InciScope</h3>
         <fieldset id="contactInfo">
             <legend> Personal information </legend>
             <label for="fname">Name <input type="text" name="fname" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
@@ -57,52 +58,7 @@
     </form>
     <div id="thankyou" ></div>
     </main>
-<!-- <h1>Join us</h1>
-        <div class="classmain">
-        <form action="record-thankyou.html" method="get" class="join-form">
-            <label for="firstname"> First Name:</label><input type="text" id="firstname" name="firstname" title="Write your first name here" autocomplete="given-name" required/>
-            <label for="lastname"> Last Name:</label><input type="text" id="lastname" name="lastname" title="Write your last name here" autocomplete="family-name" required/>
-            <label for="age"> Age:</label><input type="text" name="age" id="age" title="Years old" pattern="[0-9\- ]+"/>
-            <label for="email"> Email:</label><input type="email" name="email" id="email" title="Write your email here" autocomplete="email" placeholder="example@email.com" required/>
-            <label for="mobile"> Cell phone:</label><input type="tel" name="cellphone" id="mobile" title="Write your cell phone here" autocomplete="tel" pattern=[0-9]+ required/>
-           
-            <div class="textarea">
-            <label for="interests"> Interests<span>(Optional)</span></label><textarea rows="5" name="interests" id="interests" title="Write your prefences, interests, concerns, etc..."></textarea>
-                </div>
-                 <fieldset>
-                <legend>Interest selection</legend>
-            <label for="pers"><input type="radio" id="pers" name="interest-select"  value="Personalized"/>Personalized</label>
-            <label for="coached"><input type="radio" id="coached" name="interest-select"  value="Coached"/>Coached</label>
-            <label for="self"><input type="radio" id="self" name="interest-select"  value="Self-guided"/>Self-guided</label>
-            <label for="others"><input type="radio" id="others" name="interest-select"  value="Others"/>Others</label>
-            </fieldset>
-            <input type="hidden" name="timestamp" id="timestamp">
-            <input type="submit" value="Join the Gym">
-        </form>
-        <section class= "interest-cards">
-            <div>
-                <h4> Personalized</h4>
-                <button id="pers-btn" >Know more</button>
-            </div>
-            <div>
-                <h4> Coached</h4>
-                <button id="coachedclass-btn">Know more</button>
-            </div>
-            <div>
-                <h4> Self-guided</h4>
-                <button id="selfg-btn">Know more</button>
-            </div>
-            <div>
-                <h4> Others</h4>
-                <button id="other-btn">Know more</button>
-            </div>
-            <dialog id="training-details">
 
-            </dialog>
-        </section>
-         </div>
-         
-    </main>-->
    <footer id="ajaxFooter"></footer>
    <script type="module" src="/scripts/contact.js"></script>
 </body>

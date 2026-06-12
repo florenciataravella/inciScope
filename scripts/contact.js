@@ -12,15 +12,25 @@ if (page === "contact.html"){
 }
 const myForm = document.getElementById("myForm");
 const thankyouDiv = document.getElementById("thankyou");
+const check_status = myForm.checkValidity();
+
 
 myForm.addEventListener("submit", (event)=>{
     event.preventDefault();
+
+    if(check_status){
     const formData = new FormData(myForm);
     const fname = formData.get("fname");
     const lname = formData.get("lname");
-
+    const email = formData.get("email");
     
     thankyouDiv.classList.toggle("show");
-    thankyouDiv.innerHTML = `Thank you for contacting InciScope. ${fname} ${lname}`;
+    thankyouDiv.innerHTML = `Thank you for contacting InciScope. ${fname} ${lname}.Your contact information is: ${email} `;
     myForm.reset();
+    }
+    else{
+        console.log("The form has not been submitted");
+        thankyouDiv.classList.toggle("show");
+        thankyouDiv.innerHTML =`Please, fill in all the inputs.`
+    }
 })
