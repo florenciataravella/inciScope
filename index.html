@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Florencia Taravella">
+    <title>InciScope | Chemical Compound Explorer</title>
     <meta name="description" content="InciScope is a chemical compound explorer that retrieves molecular properties, descriptions, and structural information from PubChem and Wikipedia APIs.">
 
-    <title>InciScope | Chemical Compound Explorer</title>
+    
 
     <link rel="icon" href="images/favicon.ico">
 
@@ -16,6 +17,7 @@
     <meta property="og:image" content="https://inciscope.onrender.com/images/InciScope.png">
     <meta property="og:url" content="https://inciscope.onrender.com/">
     <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="/css/index-base.css">
     <link rel="stylesheet" href="/css/index-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,17 +27,12 @@
 <body>
     <header id="ajaxHeader"></header>
     <main>
-    <!--<div class="search">
-    <input type="text" id="compoundInput" name="compound" placeholder="Search compound...">
-   <button id="search-btn"> 🔍 </button>
-   </div>-->
    
-   <dialog id="myModal">
-    <p> Could not find your search, please enter another compound. Do not use special characters in your search.</p>
-    <button id="closeModal"> X </button>
-    </dialog>
+   
+   
     <section class="compound-details">
-       <div id="spinnerDiv" class="spinner"></div>
+      <h1> Search chemical compounds and discover molecular properties </h1>
+       <div id="spinner" class="hidden"></div>
          <div id="compound-pubChemDetails"></div>
           <section class="description">
           <div id="compound-wikiDetails"></div>
@@ -43,11 +40,14 @@
           </section>
     </section>
     
-  <div id="clearDiv"> <button id="clearButton">Clear</button></div>
-   
+  <div id="clearDiv"> <button id="clearButton" aria-label="clear description button">Clear</button></div>
+   <dialog id="myModal">
+    <p> Could not find your search, please enter another compound. Do not use special characters in your search.</p>
+    <button id="closeModal" aria-label="close modal button"> X </button>
+    </dialog>
    <dialog id="visits">
     <p id="n-visits"></p>
-    <button id="closeModal">x</button>
+    <button id="closeModal" aria-label="close modal button">x</button>
     </dialog>
     </main>
    <footer id="ajaxFooter"></footer>

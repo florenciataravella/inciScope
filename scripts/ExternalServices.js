@@ -48,7 +48,7 @@ export default class ExternalServices{
         const response = await fetch(pubChemURL);
         const pubChemData = await convertToJSON(response);
         const CID = pubChemData.PropertyTable.Properties[0].CID
-        const pubchemImageURL = `https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${CID}/PNG?image_size=300x300`;
+        const pubchemImageURL = `https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${CID}/PNG?image_size=150x150`;
         const Imageresponse = await fetch(pubchemImageURL);
         console.log("response:", Imageresponse.url)
         //console.log("CID:", CID)

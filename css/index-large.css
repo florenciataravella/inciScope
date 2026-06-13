@@ -21,6 +21,7 @@ body {
 h1, h2, h3{
     font-weight: 400;
 }
+
 }
     .hamburger{
         display: none;
@@ -54,8 +55,7 @@ h1, h2, h3{
 
     .navigation img{
     
-   height: 60px;
-    width: auto;
+   
         padding: 0.5rem;
 }
 /***********SearchInput************/
@@ -82,6 +82,12 @@ h1, h2, h3{
     justify-self: center;
 }
 /**************MAIN*****************/
+h1{
+    
+    grid-column: 1/3;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+}
 #compound-pubChemDetails{
     grid-column: 1/2;
     width: 100%;
