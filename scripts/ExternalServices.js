@@ -30,7 +30,7 @@ export default class ExternalServices{
         const pubChemData = await convertToJSON(response);
         
         const returnedCompound = pubChemData.PropertyTable.Properties[0];
-       console.log("PubChemData:" , pubChemData);
+       
        return {
             CID: returnedCompound.CID,
             Title : returnedCompound.Title,
@@ -50,8 +50,7 @@ export default class ExternalServices{
         const CID = pubChemData.PropertyTable.Properties[0].CID
         const pubchemImageURL = `https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${CID}/PNG?image_size=150x150`;
         const Imageresponse = await fetch(pubchemImageURL);
-        console.log("response:", Imageresponse.url)
-        //console.log("CID:", CID)
+       
         return Imageresponse.url
         
     }
@@ -60,12 +59,7 @@ export default class ExternalServices{
 
         const response = await fetch(wikiURL);
         const wikiData = await convertToJSON(response);
-        
-        console.log("Wikipedia Data:" , wikiData);
-      
-        
-        console.log("wikiData.description:" , wikiData.description);
-        console.log("wikiData.extract:", wikiData.extract)
+    
         return {
 
             Description: wikiData.description,
