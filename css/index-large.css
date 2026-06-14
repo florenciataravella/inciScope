@@ -37,7 +37,6 @@ h1, h2, h3{
     }
     .nav-links{
         grid-column: 2/3;
-
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -58,10 +57,10 @@ h1, h2, h3{
 
     .navigation img{
     
-        max-height: 60px;
-        width: auto;
-        display: block;
-        padding: 0.5rem;
+    max-height: 60px;
+    width: auto;
+    display: block;
+    padding: 0.5rem;
 }
 /***********SearchInput************/
 #compoundInput{
@@ -78,7 +77,7 @@ h1, h2, h3{
     /* margin-right: 2rem;*/
 
 }
-    .compound-details{
+.compound-details{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px; 
