@@ -25,10 +25,14 @@ export default class ExternalServices{
        const pubChemURL = `https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/${this.compound}/property/Title,MolecularWeight,MolecularFormula,HBondDonorCount,HBondAcceptorCount,IUPACName/JSON`;
        
       
-
+        try{
         const response = await fetch(pubChemURL);
         const pubChemData = await convertToJSON(response);
         
+            if (!response.ok) {
+            throw new Error(`PubChem returned ${response.status}`);
+            }
+
         const returnedCompound = pubChemData.PropertyTable.Properties[0];
        
        return {
@@ -40,7 +44,12 @@ export default class ExternalServices{
             HBondDonorCount: returnedCompound.HBondDonorCount,
             IUPACName: returnedCompound.IUPACName
                 }
-
+}
+        catch (error){
+            console.error("Compound not found:", error)
+            errorModal();
+            throw error
+        }
         
     }
     async getPubChemImage(){
@@ -71,15 +80,12 @@ export default class ExternalServices{
 
     async init(){
 
-        try{
+        
         await this.getPubChemData()
         await this.getWikiData()
         await this.getPubChemImage()
             }
-        catch (error){
-            errorModal();
-        console.log("Error fetching the data", error);
-}
+        
 
-    }
+    
 }

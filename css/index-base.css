@@ -137,7 +137,7 @@ main{
 h1{
     font-size: 1rem;
     font-family:"Playfair Display", serif;
-    
+    padding-bottom: 1rem;
 }
 #compound-pubChemDetails{
     grid-column: 1/2;

@@ -8,8 +8,8 @@ export default class CompoundDetails{
         this.pubchemdetailsElement = pubchemdetailsElement;
         this.imageElement = imageElement;
         this.wikidetailsElement = wikidetailsElement;
-        this.pubChemDetails = {};
-        this.wikiDetails = {};
+        this.pubChemDetails = {};           //  Retrieved through the fetch request.
+        this.wikiDetails = {};              //  The data obtained is converted after the request into a JSON object (details).
         this.image = {};
 
     }

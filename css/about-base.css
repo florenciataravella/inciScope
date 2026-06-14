@@ -79,6 +79,8 @@ main{
     );
 
     display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3;
 
     }
 h2{
@@ -92,7 +94,7 @@ h2{
     padding-left: 2rem;
 
 }
-.description, .tech {
+.description, .tech, .tips {
     padding: 2rem;
     
     align-self: center;
@@ -102,6 +104,20 @@ h2{
         #eef7f0;*/
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+
+.description{
+   
+    grid-row: 1;
+}
+.tech{
+   
+    grid-row: 3;
+}
+.tips{
+   
+    grid-row: 2;
+}
+
 
 /**************FOOTER***************/
 .footer-grid{

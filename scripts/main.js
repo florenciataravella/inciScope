@@ -36,7 +36,6 @@ clearBtn.addEventListener("click", ()=> {
 display();
 });
     
-
 function display(){
 let homeBanner = setInterval( async() => {
     
