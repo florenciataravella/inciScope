@@ -36,7 +36,7 @@ h1, h2, h3{
         align-items: center;
         justify-content: flex-end;
         gap: 2rem;
-        margin: 0;
+        margin: 0%;
         padding-right: 2rem;
         
     }
@@ -57,15 +57,9 @@ h1, h2, h3{
     width: auto;
     display: block;
     padding: 0.5rem;
+    align-self: center;
     }
-.compound-details{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px; 
-    padding-top: 2rem;
-    width: 90%;
-    justify-self: center;
-}
+
 /**************MAIN*****************/
 main{
     padding: 2rem;
