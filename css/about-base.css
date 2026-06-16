@@ -82,6 +82,8 @@ main{
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3;
+    padding-top: 7rem;
+
 
     }
 h2{
