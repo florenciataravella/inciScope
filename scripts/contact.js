@@ -10,13 +10,19 @@ if (page === "contact.html"){
     const search =  document.getElementById("searchLi");
     search.classList.add("hide")
 }
-const myForm = document.getElementById("myForm");
-const thankyouDiv = document.getElementById("thankyou");
-const check_status = myForm.checkValidity();
+
+
+
 
 
 myForm.addEventListener("submit", (event)=>{
     event.preventDefault();
+
+    const myForm = document.forms["myForm"];
+    const check_status = myForm.checkValidity();
+    const invalidFields = myForm.querySelectorAll(":invalid");
+    const thankyouDiv = document.getElementById("thankyou");
+    myForm.reportValidity();
 
     if(check_status){
     const formData = new FormData(myForm);
@@ -30,7 +36,10 @@ myForm.addEventListener("submit", (event)=>{
     }
     else{
         console.log("The form has not been submitted");
+       
+        console.log(invalidFields);
         thankyouDiv.classList.toggle("show");
         thankyouDiv.innerHTML =`Please, fill in all the inputs.`
+        return
     }
 })

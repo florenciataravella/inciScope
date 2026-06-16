@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.png">
 
     <meta property="og:title" content="Contact InciScope">
     <meta property="og:image" content="https://inciscope.onrender.com/images/InciScope.png">
@@ -30,20 +30,20 @@
        
         <fieldset id="contactInfo">
             <legend> Personal information </legend>
-            <label for="fname">Name <input type="text" name="fname" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
-  title="Please enter letters only." autocomplete="given-name"> </label>
-            <label for="lname">Last name <input type="text" name="lname" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
-  title="Please enter letters only." autocomplete="family-name"> </label>
-            <label for="email">e-mail <input type="email" name="email" placeholder="example@email.com" required autocomplete="email"> </label>
-            <label for="phone">Phone <input type="tel" name="phone" pattern="[\+]?[0-9\s\-\(\)]{8,20}"> </label>
-            <label for="website">Website <input type="text" name="website"> </label>
+            <label for="fname">Name <input type="text" name="fname" required
+  title="Please enter letters only." autocomplete="given-name" id="fname"> </label>
+            <label for="lname">Last name <input type="text" name="lname" required
+  title="Please enter letters only." autocomplete="family-name" id="lname"> </label>
+            <label for="email">e-mail <input type="email" name="email" placeholder="example@email.com" required autocomplete="email" id="email"> </label>
+            <label for="phone">Phone <input type="tel" name="phone" id="phone"> </label>
+            <label for="website">Website <input type="text" name="website" id="website" autocomplete="url"> </label>
         </fieldset>
         <fieldset id="interest">
             <legend> Interest</legend>
-            <label for="interest"> Compound information
-            <input type="radio" name="interest" value="compound information"></label>
-            <label for="interest"> Supplier information<input type="radio" name="interest" value="supplier information"></label>
-            <label for="interest"> Formulation information <input type="radio" name="interest" value="formulation interest"></label>
+            <label for="compoundInfo"> Compound information
+            <input type="radio" name="interest" value="compound information" id="compoundInfo"></label>
+            <label for="supplierInfo"> Supplier information<input type="radio" name="interest" value="supplier information" id="supplierInfo"></label>
+            <label for="formInfo"> Formulation information <input type="radio" name="interest" value="formulation interest" id="formInfo"></label>
             
           <div class="textarea">
             <label for="interests"> Interests<span>(Optional)</span></label><textarea rows="5" name="interests" id="interests" title="Write your prefences, interests, concerns, etc..."></textarea>
