@@ -131,6 +131,7 @@ main{
         grid-template-rows: 2;
         width: 90%;
         justify-self: center;
+        padding-top: 2rem;
 
     }
 h1{

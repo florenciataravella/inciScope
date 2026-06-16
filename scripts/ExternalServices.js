@@ -54,29 +54,58 @@ export default class ExternalServices{
     }
     async getPubChemImage(){
         const pubChemURL = `https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/${this.compound}/property/Title/JSON`;
+
+        try{
+
         const response = await fetch(pubChemURL);
         const pubChemData = await convertToJSON(response);
         const CID = pubChemData.PropertyTable.Properties[0].CID
         const pubchemImageURL = `https://pubchem.ncbi.nlm.nih.gov/image/imgsrv.fcgi?cid=${CID}/PNG?image_size=150x150`;
         const Imageresponse = await fetch(pubchemImageURL);
-       
+            
+        if (!response.ok) {
+            throw new Error(`PubChem returned ${response.status}`);
+            }
+
         return Imageresponse.url
+        }
+        catch (error){
+            console.error("Compound not found:", error)
+            errorModal();
+            throw error
+        }
+        
         
     }
     async getWikiData(){
+
         const wikiURL= `https://en.wikipedia.org/api/rest_v1/page/summary/${this.compound}`
 
-        const response = await fetch(wikiURL);
-        const wikiData = await convertToJSON(response);
     
-        return {
+        try{
+            
+            const response = await fetch(wikiURL);
+            const wikiData = await convertToJSON(response);
+            
+            if (!response.ok) {
+            throw new Error(`PubChem returned ${response.status}`);
+            }
+            
+            return {
 
             Description: wikiData.description,
             Extract: wikiData.extract
+            }
+        }
+        catch(error){
+            console.error("Compound not found:", error)
+            errorModal();
+            throw error
+        }
+        
         
                 }
             
-            }
 
     async init(){
 

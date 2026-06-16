@@ -11,14 +11,14 @@ if (page === "contact.html"){
     search.classList.add("hide")
 }
 
-
+const myForm = document.forms["myForm"];
 
 
 
 myForm.addEventListener("submit", (event)=>{
     event.preventDefault();
 
-    const myForm = document.forms["myForm"];
+    
     const check_status = myForm.checkValidity();
     const invalidFields = myForm.querySelectorAll(":invalid");
     const thankyouDiv = document.getElementById("thankyou");
